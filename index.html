@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Какой ты футболист?</title>
+  <title>Какой вы футболист?</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/544/544338.png">
@@ -11,12 +11,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1 class="title">Опрос</h1>
+  <h1 class="title">Тест: "Какой вы футболист?"</h1>
     <form action="/submit" method="post" class="main" id="football" onsubmit="event.preventDefault(); processAnswers();">
-        <label for="name" class="question_div">Ваше имя, фамилия:</label>
+        <label for="name" class="question_div">Введите ваше имя и фамилию:</label>
         <input type="text" id="name" name="name" required class="input">
 
 
+        <div class="question">
+        	<div class="question_div">
+            <label class="question_title">Ваш пол:</label>
+          </div>
+        	<label for="q0_1">
+        		<input type="radio" id="q0_1" name="q0" value="" required class="radio_btn">
+        		<span class="radio_btn2">Мужской</span>
+        	</label>
+        	<label for="q0_2">
+        		<input type="radio" id="q0_2" name="q0" value="" required class="radio_btn">
+        		<span class="radio_btn2">Женский</span>
+        	</label>
+        </div>
 
         <div class="question">
           <div class="question_div">
@@ -87,7 +100,7 @@
         <div class="question" style="margin-bottom: 25px;">
           <div class="question_div" style="">
             <span>3</span>
-            <label class="question_title">Кто для тебя лучший игрок всех времен?</label>
+            <label class="question_title">Кто для Вас лучший игрок всех времен?</label>
           </div>
           <div class="div_row photo photo2">
               <label class="var" for="q3_1">
@@ -130,7 +143,7 @@
         <div class="question">
           <div class="question_div">
             <span>4</span>
-            <label class="question_title">Насколько вы быстры?</label>
+            <label class="question_title">Насколько Вы быстры?</label>
           </div>
           <div class="div_row">
                 <div class="radio_btn2"> 
@@ -158,7 +171,7 @@
         <div class="question">
           <div class="question_div">
             <span>5</span>
-            <label class="question_title">Насколько вы "бандит"?</label>
+            <label class="question_title">Насколько Вы "бандит"?</label>
           </div>
           <div class="div_row">
                 <div class="radio_btn2"> 
@@ -186,7 +199,7 @@
         <div class="question">
           <div class="question_div">
             <span>6</span>
-            <label class="question_title">Хорошо ли вы коммуницируете с людьми?</label>
+            <label class="question_title">Хорошо ли Вы коммуницируете с людьми?</label>
           </div>
           <div class="div_row">
                 <div class="radio_btn2"> 
@@ -298,7 +311,7 @@
         <div class="question">
           <div class="question_div">
             <span>10</span>
-            <label class="question_title">Как у вас дела с подкатом?</label>
+            <label class="question_title">Как у Вас дела с подкатом?</label>
           </div>
           <div class="div_row">
                 <div class="radio_btn2"> 
@@ -466,7 +479,7 @@
         <div class="question" id="questionContainer16">
           <div class="question_div">
               <span id="questionNumber">16</span>
-              <label class="question_title">Если бы вам дали роль играть меньше, вы бы согласились?</label>
+              <label class="question_title">Если бы Вам дали роль играть меньше, Вы бы согласились?</label>
           </div>
           <div class="div_row">
               <div class="radio_btn2"> 
@@ -522,7 +535,7 @@
 <div class="question" id="questionContainer18">
     <div class="question_div">
         <span id="questionNumber">18</span>
-        <label class="question_title">А ваш штрафной удар?</label>
+        <label class="question_title">А Ваш штрафной удар?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -549,7 +562,7 @@
 <div class="question" id="questionContainer19">
     <div class="question_div">
         <span id="questionNumber">19</span>
-        <label class="question_title">У вас хорошо работает голова?</label>
+        <label class="question_title">У Вас хорошо работает голова?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -576,7 +589,7 @@
 <div class="question" id="questionContainer20">
     <div class="question_div">
         <span id="questionNumber">20</span>
-        <label class="question_title">Что насчёт ваших рук?</label>
+        <label class="question_title">Что насчёт Ваших рук?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -603,7 +616,7 @@
 <div class="question" id="questionContainer21">
     <div class="question_div">
         <span id="questionNumber">21</span>
-        <label class="question_title">Какова ваша выносливость?</label>
+        <label class="question_title">Какова Ваша выносливость?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -657,7 +670,7 @@
 <div class="question" style="margin-bottom: 25px;">
           <div class="question_div" style="">
             <span>23</span>
-            <label class="question_title">Какую травму вы бы боялись получить? </label>
+            <label class="question_title">Какую травму Вы бы боялись получить? </label>
           </div>
           <div class="div_row photo photo2">
               <label class="var" for="q23_1">
@@ -717,7 +730,7 @@
 <div class="question" id="questionContainer25">
     <div class="question_div">
         <span id="questionNumber">25</span>
-        <label class="question_title">Какой рукой ты написал бы слово “Гол”?</label>
+        <label class="question_title">Какой рукой Вы написали бы слово “Гол”?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -840,7 +853,7 @@
 <div class="question" id="questionContainer30">
     <div class="question_div">
         <span id="questionNumber">30</span>
-        <label class="question_title">На какой позиции вам было бы комфортно?</label>
+        <label class="question_title">На какой позиции Вам было бы комфортно?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -868,7 +881,7 @@
 <div class="question" id="questionContainer31">
     <div class="question_div">
         <span id="questionNumber">31</span>
-        <label class="question_title">В воротах ты бы...</label>
+        <label class="question_title">В воротах Вы бы...</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -896,7 +909,7 @@
 <div class="question" id="questionContainer32">
     <div class="question_div">
         <span id="questionNumber">32</span>
-        <label class="question_title">Закинь сейчас ногу на ногу. Какая лежит сверху?</label>
+        <label class="question_title">Закиньте сейчас ногу на ногу. Какая лежит сверху?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -961,7 +974,7 @@
 <div class="question" id="questionContainer35">
     <div class="question_div">
         <span id="questionNumber">35</span>
-        <label class="question_title">Если бы ты случайно задел кружку, а она стала падать со стола, сможешь мгновенно ее схватить?</label>
+        <label class="question_title">Если вы случайно задели кружку, а она стала падать со стола, смогли бы мгновенно ее схватить?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -988,7 +1001,7 @@
 <div class="question" id="questionContainer36">
     <div class="question_div">
         <span id="questionNumber">36</span>
-        <label class="question_title">Атаковать первым это твое?</label>
+        <label class="question_title">Атаковать первым это Ваше?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -1015,7 +1028,7 @@
 <div class="question" id="questionContainer37">
     <div class="question_div">
         <span id="questionNumber">37</span>
-        <label class="question_title">Тебе нравится “читать” игру?</label>
+        <label class="question_title">Вам нравится “читать” игру?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -1042,7 +1055,7 @@
 <div class="question" id="questionContainer38">
     <div class="question_div">
         <span id="questionNumber">38</span>
-        <label class="question_title">Ты рослый, крепкий и готов забивать голы с любой точки поля?</label>
+        <label class="question_title">Вы рослый, крепкий и готовы забивать голы с любой точки поля?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -1096,7 +1109,7 @@
 <div class="question" id="questionContainer40">
     <div class="question_div">
         <span id="questionNumber">40</span>
-        <label class="question_title">Считаете ли вы, что у вас хорошая координация в движении?</label>
+        <label class="question_title">Считаете ли Вы, что у Вас хорошая координация в движении?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -1150,7 +1163,7 @@
 <div class="question" id="questionContainer42">
     <div class="question_div">
         <span id="questionNumber">42</span>
-        <label class="question_title">Как вы думаете, сможете ли вы отдать мяч своему партнеру за 2-3 касания?</label>
+        <label class="question_title">Как Вы думаете, сможете ли Вы отдать мяч своему партнеру за 2-3 касания?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
@@ -1177,7 +1190,7 @@
 <div class="question" id="questionContainer43">
     <div class="question_div">
         <span id="questionNumber">43</span>
-        <label class="question_title">Какой у вас рост?</label>
+        <label class="question_title">Какой у Вас рост?</label>
     </div>
     <div class="div_row">
         <div class="radio_btn2"> 
