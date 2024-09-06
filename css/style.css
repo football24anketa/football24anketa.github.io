@@ -6,6 +6,7 @@ body {
 }
 
 .content {
+  margin-top: 0px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,13 +68,15 @@ body {
 }
 
 .big-logo {
-  position: absolute;
+  position: relative;
   -webkit-filter: invert(100%);
           filter: invert(100%);
   width: 50%;
+  min-height: 100vh;
+  height: auto;
   margin-top: 10vh;
   font-family: "Veles";
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
 }
 
@@ -194,7 +197,7 @@ body {
 
 .rollercoaster {
   width: 100%;
-  height: 500px;
+  height: 50vh;
   overflow: hidden;
   overflow-y: hidden;
   margin-top: 0px;
@@ -293,4 +296,37 @@ body {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .big-logo {
+    width: 90%;
+  }
+  .box {
+    width: 90%;
+  }
+  .patch {
+    width: 90%;
+  }
+  .rollercoaster {
+    height: 30vh;
+  }
+  .nav {
+    height: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav a {
+    display: none;
+  }
+  .nav-buttons {
+    display: none;
+  }
+  .green_chalk:hover {
+    opacity: 0;
+  }
+  .big-logo {
+    font-size: 40px;
+  }
 }

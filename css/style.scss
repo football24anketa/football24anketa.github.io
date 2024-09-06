@@ -6,6 +6,7 @@ $black: black;
 $content-pad: 10px;
 $img-border-radius: 15px;
 $box-size: 50%;
+$lil-box-size: 90%;
 
 body{
 	background-color: white;
@@ -15,9 +16,10 @@ body{
 }
 
 .content{
+	margin-top: 0px;
 	width: 100%;
 	display: flex;
-	flex-direction: column;;
+	flex-direction: column;
 	align-items: center;
 	position: relative;
 }
@@ -57,12 +59,14 @@ body{
 }
 
 .big-logo{
-	position: absolute;
+	position: relative;
 	filter: invert(100%);
 	width: $box-size;
+	min-height: 100vh;
+	height: auto;
 	margin-top: 10vh;
 	font-family: 'Veles';
-	font-size: 70px;
+	font-size: 60px;
 	text-align: center;
 
 }
@@ -158,7 +162,7 @@ body{
 
 .rollercoaster{
 	width: 100%;
-	height: 500px;
+	height: 50vh;
 	overflow: hidden;
 	overflow-y: hidden;
 	margin-top: 0px;
@@ -234,4 +238,42 @@ body{
 .green_chalk:hover{
 	transition-duration: 0.3s;
 	opacity: 1;
+}
+
+// ////////
+
+@media screen and (max-width: 1000px){
+.big-logo{
+	width: $lil-box-size;
+}
+.box{
+	width: $lil-box-size;
+}
+.patch{
+	width: $lil-box-size
+}
+.rollercoaster{
+	height: 30vh;
+}
+.nav{
+	height: 20px;
+	justify-content: center;
+}
+
+.nav a{
+	display: none;
+}
+
+.nav-buttons{
+	display: none;
+}
+
+.green_chalk:hover{
+	opacity: 0;
+}
+
+.big-logo{
+	font-size: 40px;
+}
+
 }
