@@ -1,168 +1,296 @@
-body{
-	margin:0px;
-	font-family: Roboto;
+body {
+  background-color: white;
+  margin: 0px;
+  height: 8000px;
+  padding-top: 75px;
 }
-.title{
-	text-align: center;
-	font-family: Roboto;
+
+.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
-.main{
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 90%;
+
+.asphalt {
+  position: relative;
+  height: auto;
+  background-size: auto 90%;
+  background-position: top;
+  background-image: url(../img/asphalt.jpg);
+  color: white;
 }
-.input{
-	width: 80%;
-	height: 30px;
-	font-size: 30px;
-	font-family: Roboto;
-	text-align: center;
-	margin-bottom: 25px;
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  background-color: #2b8739;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 150%;
+  padding: 20px 0px;
+  height: 35px;
+  width: 100%;
 }
-.question_div{
-	font-size: 21px;
-	margin-bottom: 10px;
-	font-family: Roboto;
-	display: flex;
-	align-items: center;
+
+.logo {
+  margin-left: 20px;
+  color: white;
+  font-family: "Sonny Vol 2";
+  font-weight: bold;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.question_div span{
-	margin-right: 15px;
-	background-color: violet;
-	padding: 10px;
+
+.big-logo {
+  position: absolute;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 50%;
+  margin-top: 10vh;
+  font-family: "Veles";
+  font-size: 70px;
+  text-align: center;
 }
-.div_row{
-	background-color: rgba(0,0,0,0);
-	display: flex;
-	justify-content: center;
-	margin-bottom: 25px;
-	align-items: center;
-	height: auto;
-	flex-wrap: wrap;
-	width: 100%;
+
+.big-logo img {
+  width: 100%;
 }
-.pre_question{
-	font-family: Roboto;
-	font-size: 20px;
+
+.no-focus {
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
-.var label{
-	font-size: 23px;
+
+.dot {
+  color: #0b4f29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 30px;
+  font-family: TimesNewRoman;
+  font-size: 60px;
+  margin: 0px 10px;
 }
-.var input{
-  margin-right: 10px;
+
+.nav-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Stem";
+  margin-left: auto;
+  margin-right: 30px;
+  font-size: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.nav-button {
+  margin-left: 15px;
+}
+
+.vk {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vk img {
+  width: 40px;
+}
+
+.img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.img-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.text-box {
+  font-family: "Stem";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+}
+
+.text-box .desc {
+  background-color: #edebeb;
+  padding: 2%;
+  border-radius: 15px;
+  font-weight: 350;
+}
+
+.title {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.green {
+  color: #2b8739;
+}
+
+.box {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.rollercoaster {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  overflow-y: hidden;
+  margin-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rollercoaster img {
+  height: 100%;
+}
+
+.patch {
+  width: 50%;
+  border-radius: 15px;
+  padding: 0px 10px;
+  font-family: "Chalk";
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+}
+
+.members_count {
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  margin: 5% 0;
+  width: auto;
+  padding: 25px 25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 30px;
+  font-family: "Chalk";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.green_chalk {
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 0;
+  background-image: url(../img/green_chalk.png);
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  overflow: clip;
+  position: relative;
+  background-position: center;
+  font-family: "Chalk";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 45px;
   cursor: pointer;
-  display: inline-block;
-}
-.finish{
-	margin-bottom: 30px;
-	height: 60px;
-	cursor: pointer;
-	width: 150px;
-	border-radius: 20px;
-	transition-duration: 0.3s;
-}
-.finish:hover{
-	transition-duration: 0.3s;
-	opacity: 0.8;
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-.radio_btn{
-	opacity: 0;
-	position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  width: 300px;
+  height: 100px;
+  margin: 20px;
+  margin-top: 50px;
+  font-size: 22px;
 }
 
-.radio_btn:checked+.radio_btn2{
-	box-shadow: inset 0 0 0 3px rgba(236,31,238,0.3);
-}
-
-.radio_btn2{
-	transition-duration: 0.3s;
-	font-family: Roboto;
-	font-size: 20px;
-	position: relative;
-	display: inline-block;
-	background-color: rgba(0,0,256,0.2);
-	margin: 2px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 10px;
-	cursor: pointer;
-	padding: 7px;
-}
-.radio_btn2 img{
-	border-radius: 5px;
-	width: 100%;
-}
-
-.photo{
-	margin-bottom: 0px;
-}
-.photo label{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-.photo input{
-	opacity: 0;
-	margin-top: 7px;
-	margin-left: 7px;
-}
-.photo span{
-	width: 90%;
-	display: flex;
-	flex-direction: column;
-	font-size: 14px;
-}
-.desc{
-	margin-top: 3px;
-	margin-bottom: -3px;
-}
-.photo2 label{
-	width: 50%;
-}
-label{
-	margin-bottom: 5px;
-}
-.photo2 img{
-	height: 100px;
-	object-fit: cover;
-}
-.bars{
-	display: flex;
-	flex-direction: column;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	padding-right: 35px;
-	text-align: right;
-	width: 80%;
-}
-.e{
-	margin-top: 15px;
-	background-color: rgba(236,31,238,0.5);
-	width: 100%;
-	height: 20px;
-	padding-right: 5px;
-	font-weight: bold;
-	border-radius: 5px;
-}
-.des{
-	margin-top: 3px;
-	font-size: 20px;
-	margin-bottom: 30px;
-}
-.log{
-	font-weight: bold;
-	font-size: 23px;
-	color: rgba(236,70,238,1);
-}
-@media (min-width: 768px) {
-    .main {
-        width: 50%;
-    }
+.green_chalk:hover {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  opacity: 1;
 }

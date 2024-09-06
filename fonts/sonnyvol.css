@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Sonny Vol 2';
+    src: local('Sonny Vol 2 Ultra Black'), local('Sonny-Vol-2-Ultra-Black'),
+        url('SonnyVol2-UltraBlack.woff2') format('woff2'),
+        url('SonnyVol2-UltraBlack.woff') format('woff'),
+        url('SonnyVol2-UltraBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'dsChalk';
+    src: url('dschalk.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Veles';
+    src: url('veles.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Chalk';
+    src: url('chalk.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Eraser';
+    src: url('eraser.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
