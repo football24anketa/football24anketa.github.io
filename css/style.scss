@@ -13,6 +13,8 @@ body{
 	margin: 0px;
 	height: 8000px;
 	padding-top: 75px;
+	width: 100vw;
+	overflow-x: clip;
 }
 
 .content{
@@ -31,6 +33,7 @@ body{
 	background-position: top;
 	background-image: url(../img/asphalt.jpg);
 	color: $main;
+	font-size: 50px;
 }
 
 .nav{
@@ -62,9 +65,10 @@ body{
 	position: relative;
 	filter: invert(100%);
 	width: $box-size;
-	min-height: 100vh;
+	max-height: 80vh;
+	min-height: 80vh;
 	height: auto;
-	margin-top: 10vh;
+	margin-top: 20vh;
 	font-family: 'Veles';
 	font-size: 60px;
 	text-align: center;
@@ -231,7 +235,6 @@ body{
 	width: 300px;
 	height: 100px;
 	margin: 20px;
-	margin-top: 50px;
 	font-size: 22px;
 }
 
@@ -243,6 +246,15 @@ body{
 // ////////
 
 @media screen and (max-width: 1000px){
+
+.asphalt{
+	font-size: 30px;
+}
+
+.desc{
+	font-size: 15px;
+}
+
 .big-logo{
 	width: $lil-box-size;
 }
@@ -250,7 +262,8 @@ body{
 	width: $lil-box-size;
 }
 .patch{
-	width: $lil-box-size
+	width: $lil-box-size;
+	font-size: 15px;
 }
 .rollercoaster{
 	height: 30vh;
@@ -274,6 +287,27 @@ body{
 
 .big-logo{
 	font-size: 40px;
+}
+
+.button{
+	width: 200px;
+	height: 70px;
+	font-size: 17px;
+}
+.members_count{
+	border: 2px dashed rgba(white, 0.6);
+	margin: 5% 0;
+	width: auto;
+	// backgro  }und-color: rgba(#e6e6e6,0.8);
+	padding: 15px 15px;
+	text-align: center;
+	color: rgba(white,0.6);
+	font-size: 20px;
+	font-family: 'Chalk';
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 }
