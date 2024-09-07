@@ -2,7 +2,6 @@ let scroll
 let body
 let rollercoaster
 let biglogo
-
 function handleResponse(data) {
     if (data.response && data.response[0].members_count) {
         console.log("Количество подписчиков: " + data.response[0].members_count);

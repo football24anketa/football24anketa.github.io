@@ -1,10 +1,8 @@
 body {
   background-color: white;
   margin: 0px;
-  height: 8000px;
-  padding-top: 75px;
-  width: 100vw;
-  overflow-x: clip;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .content {
@@ -26,7 +24,7 @@ body {
 .asphalt {
   position: relative;
   height: auto;
-  background-size: auto 90%;
+  background-size: auto 100%;
   background-position: top;
   background-image: url(../img/asphalt.jpg);
   color: white;
@@ -146,24 +144,6 @@ body {
   width: 40px;
 }
 
-.img-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.img-box img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  width: 100%;
-  border-radius: 15px;
-}
-
 .text-box {
   font-family: "Stem";
   display: -webkit-box;
@@ -175,7 +155,8 @@ body {
   font-size: 20px;
 }
 
-.text-box .desc {
+.desc {
+  width: 100%;
   background-color: #edebeb;
   padding: 2%;
   border-radius: 15px;
@@ -183,7 +164,7 @@ body {
 }
 
 .title {
-  font-size: 21px;
+  font-size: 1.1rem;
   font-weight: 400;
 }
 
@@ -197,6 +178,29 @@ body {
   border-radius: 15px;
   margin-top: 10px;
   width: 50%;
+}
+
+.img-box {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  max-height: 100vh;
+}
+
+.img-box img {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  width: auto;
+  max-width: 100%;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .rollercoaster {
@@ -224,9 +228,13 @@ body {
   font-weight: bold;
 }
 
+.patch img {
+  height: 200px;
+}
+
 .members_count {
   border: 2px dashed rgba(255, 255, 255, 0.6);
-  margin: 5% 0;
+  margin: 1% 0;
   width: auto;
   padding: 25px 25px;
   text-align: center;
@@ -301,7 +309,77 @@ body {
   opacity: 1;
 }
 
+.about {
+  text-align: right;
+  font-family: "Stem";
+  margin-top: 20px;
+  width: 25vw;
+  min-height: 14vw;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  padding-right: 20px;
+  padding-left: 12%;
+  border-radius: 15px;
+  position: relative;
+  font-size: 1.3vw;
+  font-weight: 250;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.right {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 12%;
+}
+
+.about img {
+  position: absolute;
+  top: -40px;
+  width: 30%;
+  height: auto;
+  background-color: #2b8739;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+}
+
+.left img {
+  left: -50px;
+}
+
+.right img {
+  right: -50px;
+}
+
+.sky {
+  background-image: url(../img/mel.jpg);
+  background-size: 100% auto;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+#vkontakte_count {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 1000px) {
+  .right {
+    padding-right: 22%;
+  }
+  .left {
+    padding-left: 22%;
+  }
+  .about {
+    margin-top: 40px;
+    width: 50vw;
+    font-size: 3.2vw;
+  }
   .asphalt {
     font-size: 30px;
   }
@@ -319,7 +397,7 @@ body {
     font-size: 15px;
   }
   .rollercoaster {
-    height: 30vh;
+    display: none;
   }
   .nav {
     height: 20px;
@@ -348,7 +426,7 @@ body {
     border: 2px dashed rgba(255, 255, 255, 0.6);
     margin: 5% 0;
     width: auto;
-    padding: 15px 15px;
+    padding: 15px 10px 0px 10px;
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
     font-size: 20px;
@@ -366,5 +444,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .patch img {
+    height: 100px;
+  }
+  .asphalt {
+    background-size: auto 120%;
+  }
+  #vkontakte_count {
+    font-size: 25px;
   }
 }
