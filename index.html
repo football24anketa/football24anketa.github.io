@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="fonts/sonnyvol.css">
 	<link rel="stylesheet" href="fonts/stem.css">
+	<link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
 </head>
 <body>
 	<script src="scripts/system.js"></script>
@@ -28,7 +29,8 @@
 	<div class="nav">
 		<div class="logo font-face" style="">
 			<p>ABUNA</p>
-			<span class="no-focus dot" style="">.</span>
+			<!-- <span class="no-focus dot" style="">.</span> -->
+			<img src="img/cr_tree.png" alt="" class="dot no-focus">
 			<p>FEST</p>
 		</div>
 		<div class="nav-buttons">
@@ -61,7 +63,7 @@
 	<div class="rollercoaster no-focus"><img src="https://retrailer.ru/wp-content/uploads/2023/03/instagram-12.jpg" alt=""><img src="https://sanya-anya.ru/wp-content/uploads/festival-avtodomov-v-suzdale-abunafest-2024-03-1024x683.webp" alt=""><img src="https://retrailer.ru/wp-content/uploads/2023/03/instagram-21.jpg" alt=""><img src="https://rvland.ru/wp-content/themes/rvl/specials/abunafest/2022/graphics/images/location_5.jpg" alt=""><img src="https://allfest.ru/sites/default/files/2023-03/abunafest-7.jpg" alt=""><img src="https://www.томикс33.рф/wp-content/uploads/2024/06/%D0%B0%D0%B1%D1%83%D0%BD%D0%B0%D1%84%D0%B5%D1%81%D1%82-1.jpg" alt=""></div>
 	<div class="content asphalt">
 		<hr style="width: 100%; border: none; border-top: 4px dashed #0a140b;">
-		<p class="no-focus" style="font-family: 'Chalk'; opacity: 0.7;text-align: center;">Мы - большая семья</p>
+		<p class="no-focus stars_start" style="font-family: 'Chalk'; opacity: 0.7;text-align: center;">Мы - большая семья</p>
 		<div class="patch no-focus">
 			<p style="">Ежегодно на наш фестиваль приезжают как новые,<span style="margin-left: 5px;"> </span> так и уже знакомые лица.<br><br>Различные клубы,<span style="margin-left: 5px;"> </span>путешественники и просто интересные гости.<br>Всех нас объединяет атмосфера праздника и бодрый дух караванинга и автотуризма.</p>
 			<div style="display: flex; justify-content: top;">
@@ -78,25 +80,35 @@
 		</div>
 		<hr style="width: 100%; border: none; border-top: 4px dashed #0a140b;">
 	</div>
-	<div class="content sky" style="overflow-x: hidden; width: 100vw;">
-		<p style="font-weight: bold; font-family: 'Chalk';">Организаторы</p>
+
+
+	<div class="content sky" style="overflow-x: hidden; width: 100vw; position: relative;overflow: hidden;">
+		<img src="img/mel.jpg" alt="" style="position: absolute; object-fit: contain; min-width: 100%; min-height: 100%; z-index: 0;"  class="no-focus">
+		<div class="lenta"></div>
+		<p style="font-weight: bold; font-family: 'Chalk'; z-index: 10;">Организаторы</p>
 		<div class="about left">
-			<img src="img/vladimir.jpg">
+			<img src="img/vladimir.jpg" class="no-focus">
 			<p>Всем привет, я Дядя Вова Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Alias quam magni quo voluptas sed incidunt, ratione, accusamus consequatur voluptates tempore voluptatem modi atque eligendi cumque expedita sit officia provident, velit.</p>
 		</div>
 		<div class="about right">
-			<img src="img/vladimir.jpg">
+			<img src="img/vladimir.jpg" class="no-focus">
 			<p>Всем привет, я Дядя Вова Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Alias quam magni quo voluptas sed incidunt, ratione, accusamus consequatur voluptates tempore voluptatem modi atque eligendi cumque expedita sit officia provident, velit.</p>
 		</div>
+		<div class="lenta" style="position: absolute; bottom: 0px; transform: scale(-1,1);"></div>
 	</div>
-	<div class="content" style="background-color: gray; padding: 100px 0;">
-		<div class="img-box box">
-			<img src="https://rvland.ru/wp-content/themes/rvl/specials/abunafest/2022/graphics/images/location_5.jpg" alt="">
+	<div class="content" style="">
+		<div class="leaves">
 		</div>
-		<div class="text-box box">
-			<div class="desc">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus similique obcaecati voluptatibus aperiam fuga, sequi aut, repudiandae perspiciatis! Nostrum facilis, cum quisquam ab laudantium hic dolores aut nisi nemo? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro natus sed provident a necessitatibus quae, reiciendis exercitationem ab earum autem eum maiores eligendi vitae dignissimos nam at, reprehenderit ipsum, rem.
-			</div>
+		<p style="color: white; font-family: 'Chalk';font-size: 40px;">Новости</p>
+		<div class="news">
+			<p>Всем привет! Наконец-то мы запускаем наш собственный сайт! Ваши мысли по поводу этого можно выразить в комментариях:</p>
+			<img src="https://rvland.ru/wp-content/themes/rvl/specials/abunafest/2022/graphics/images/location_5.jpg" alt="">
+			<video src="video.mp4" class="video-js" controls></video>
+		</div>
+		<div class="news">
+			<p>Всем привет! Наконец-то мы запускаем наш собственный сайт! Ваши мысли по поводу этого можно выразить в комментариях:</p>
+			<img src="https://rvland.ru/wp-content/themes/rvl/specials/abunafest/2022/graphics/images/location_5.jpg" alt="">
+			<video src="video.mp4" class="video-js" controls></video>
 		</div>
 	</div>
 </body> 
