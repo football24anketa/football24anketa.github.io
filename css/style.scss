@@ -392,6 +392,8 @@ color: #84cf74;
 
 // ////////
 
+
+
 @media screen and (max-width: 1000px){
 
 .news{
@@ -399,19 +401,26 @@ color: #84cf74;
 	min-width: $lil-box-size;
 	margin-bottom: 25px;
 }
-
 .right{
-	padding-right: 22%;
+	padding-right: 25%;
 }
 
 .left{
-	padding-left: 22%;
+	padding-left: 25%;
 }
+
+
 
 .about{
 	margin-top: 40px;
-	width: 50vw;
-	font-size: 3.2vw;
+	width: 60vw;
+	font-size: 2.5vw;
+	font-weight: 350;
+}
+
+.about img{
+	width: 30%;
+	padding: 5px;
 }
 
 .asphalt{
@@ -489,4 +498,25 @@ color: #84cf74;
 	font-size: 25px;
 }
 
+}
+
+@media screen and (max-width: 550px){
+.sky{
+	font-size: 30px;
+}
+.right img{
+	right: -20px;
+}
+
+.left img{
+	left: -20px;
+}
+
+.about{
+	font-size: 3.7vw;
+}
+
+.news p{
+	font-size: 3.4vw;
+}
 }
