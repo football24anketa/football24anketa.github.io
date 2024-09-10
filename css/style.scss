@@ -14,7 +14,6 @@ body{
 	width: 100vw;
 	height: 100vh;
 	overflow-x: hidden;
-
 }
 
 body::-webkit-scrollbar {
@@ -48,7 +47,7 @@ color: #84cf74;
 	height: auto;
 	background-size: auto 100%;
 	background-position: top;
-	background-image: url(../img/asphalt.jpg);
+	background-image: url(../img/asphalt.webp);
 	color: $main;
 	font-size: 50px;
 }
@@ -125,6 +124,7 @@ color: #84cf74;
 
 .nav-button{
 	margin-left: 15px;
+	cursor: pointer;
 }
 
 .vk{
@@ -282,10 +282,15 @@ color: #84cf74;
 	align-items: center;
 	position: absolute;
 	z-index: 0;
-	background-image: url(../img/green_chalk.png);
+	background-image: url(../img/green_chalk.webp);
 	background-position: center;
 	width: 100%;
 	height: 100%
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .button{
@@ -313,47 +318,34 @@ color: #84cf74;
 	opacity: 1;
 }
 
+.organisators{
+	justify-content: space-between;
+	width: 95vw;
+}
+
+.organisators img{
+	box-shadow: 0px 0px 10px black;
+	border-radius: 50%;
+	width: 25vw;
+	height: 25vw;
+	margin: auto 50px;
+}
+
 .about{
 	text-align: right;
 	font-family: 'Stem';
 	margin-top: 20px;
 	width: 25vw;
-	min-height: 14vw;
 	height: auto;
 	background-color: rgba(white, 0.1);
 	border: 3px solid rgba(white,0.3);
-	padding-right: 20px;
-	padding-left: 12%;
+	padding: 0 4vw;
 	border-radius: 15px;
 	position: relative;
 	font-size: 1.3vw;
 	font-weight: 250;
 	color: rgba(white, 0.7);
 	// box-shadow: 0px 0px 10px black;
-}
-
-.right{
-	text-align: left;
-	padding-left: 20px;
-	padding-right: 12%;
-}
-
-.about img{
-	position: absolute;
-	top: -40px;
-	width: 30%;
-	height: auto;
-	background-color: #8c823e;
-	border-radius: 50%;
-	object-fit: cover;
-	padding: 10px 10px 10px 10px;
-	box-shadow: 0px 0px 10px black;
-}
-.left img{
-	left: -50px;
-}
-.right img{
-	right: -50px;
 }
 
 .sky{
@@ -369,7 +361,7 @@ color: #84cf74;
 
 .lenta{
 	width: 100%;
-	background-image: url(../img/lenta.jpg);
+	background-image: url(../img/lenta.webp);
 	height: 40px;
 	opacity: 0.8;
 	background-size: 40% auto;
@@ -381,9 +373,40 @@ color: #84cf74;
 	position: fixed;
 	top: 0px;
 	z-index: -1;
-	background-image: url(../img/stars.jpg);
-	background-size: auto 100vw;
+	background-image: url(../img/stars.webp);
+	background-size: 100vh auto;
 	opacity: 0;
+}
+
+.paper{
+	width: 100vw;
+	// height: 1000px;
+	background-color: gray;
+	background-image: url(../img/grass.webp);
+	// opacity: 0.7;
+	background-size: 50% auto;
+	// margin-bottom: 80px;
+	padding-bottom: 100px;
+}
+
+.paper p{
+	z-index: 1;
+	width: $box-size;
+	color: white;
+	font-family: 'Stem';
+	font-size: 23px;
+	font-weight: 300;
+	opacity: 0.7;
+	text-align: center;
+	background-color: black;
+	padding: 30px;
+}
+
+.paper h1{
+	padding-top: 50px;
+	opacity: 0.6;
+	font-size: 40px;
+	color: white;
 }
 
 #vkontakte_count{
@@ -396,33 +419,41 @@ color: #84cf74;
 
 @media screen and (max-width: 1000px){
 
+.paper p{
+	width: 80vw;
+}
+
+.grass{
+	bottom: -85px;
+}
+
+.organisators{
+	margin-top: 175px;
+	padding-top: 120px;
+	position: relative;
+	justify-content: space-around;
+}
+
+.organisators img{
+	width: 300px;
+	height: 300px;
+	margin: 0px;
+	position: absolute;
+	top: -180px;
+	left: 50%;
+	transform: translate(-50%,0%);
+}
+
+.about{
+	font-size: 20px;
+	width: 35vw;
+}
+
 .news{
 	max-width: $lil-box-size;
 	min-width: $lil-box-size;
 	margin-bottom: 25px;
 }
-.right{
-	padding-right: 25%;
-}
-
-.left{
-	padding-left: 25%;
-}
-
-
-
-.about{
-	margin-top: 40px;
-	width: 60vw;
-	font-size: 2.5vw;
-	font-weight: 350;
-}
-
-.about img{
-	width: 30%;
-	padding: 5px;
-}
-
 .asphalt{
 	font-size: 30px;
 }
@@ -501,22 +532,30 @@ color: #84cf74;
 }
 
 @media screen and (max-width: 550px){
+
+.paper p{
+	font-size: 4vw;
+}
+
+.paper{
+	padding-bottom: 50px;
+	margin-bottom: 0px;
+}
+
+.paper h1{
+	font-size: 30px;
+	padding-top: 20px;
+}
+
 .sky{
 	font-size: 30px;
 }
-.right img{
-	right: -20px;
-}
-
-.left img{
-	left: -20px;
-}
 
 .about{
-	font-size: 3.7vw;
+	font-size: 3.9vw;
 }
 
 .news p{
-	font-size: 3.4vw;
+	font-size: 3.5vw;
 }
 }

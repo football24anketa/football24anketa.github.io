@@ -3,11 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Абуна фест</title>
+	<title>ABUNA FEST</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="fonts/sonnyvol.css">
 	<link rel="stylesheet" href="fonts/stem.css">
 	<link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="img/icon.webp" />
+	<link rel="preload" href="img/main.webp" as="image">
 </head>
 <body>
 	<script src="scripts/system.js"></script>
@@ -16,42 +18,32 @@
 	  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
 	  crossorigin="anonymous">
 	</script>
-	<script>
-		$.ajax({
-			url: 'https://api.vk.com/method/groups.getById?group_id=220796160&access_token=d60fc61bd60fc61bd60fc61bd9d512b949dd60fd60fc61bb0d5d410e915e30b9934c8cf&fields=members_count&v=5.199',
-			method: 'GET',
-			dataType: 'JSONP',
-			success: function(data){
-				$('#vkontakte_count').text(`${data.response.groups[0].members_count}`);
-			}
-		});
-	</script>
+	<script src="scripts/vk.js"></script>
 	<div class="nav">
-		<div class="logo font-face" style="">
+		<div class="logo font-face" style="cursor: pointer;">
 			<p>ABUNA</p>
-			<!-- <span class="no-focus dot" style="">.</span> -->
-			<img src="img/cr_tree.png" alt="" class="dot no-focus">
+			<img src="img/cr_tree.webp" alt="" class="dot no-focus">
 			<p>FEST</p>
 		</div>
 		<div class="nav-buttons">
-			<div class="nav-button">
+			<div class="nav-button" href="#news">
+				Новости
+			</div>
+			<div class="nav-button" href="#history">
 				История
 			</div>
-			<div class="nav-button">
-				Организатор
-			</div>
-			<div class="nav-button">
-				Партнеры
+			<div class="nav-button" href="#orgs">
+				Организаторы
 			</div>
 		</div>
-		<a href="https://vk.com/abuna_fest"><div class="vk no-focus"><img src="img/vk.png" alt=""></div></a>
+		<a href="https://vk.com/abuna_fest"><div class="vk no-focus"><img src="img/vk.webp" alt=""></div></a>
 	</div>
 
 
 	<div class="content first-content" style="padding-bottom: 20px; position: relative;">
-		<img src="img/main.jpg" alt="" style="position: fixed; z-index: -1; top: 0px; left: 0px; width: 100%; object-fit: cover; min-height: 110vh;" class="no-focus slow-scroll">
+		<img src="img/main.webp" alt="" style="position: fixed; z-index: -1; top: 0px; left: 0px; width: 100%; object-fit: cover; min-height: 110vh;" class="no-focus slow-scroll">
 		<div class="big-logo">
-			<img src="img/abuna-fest-together.png" alt="" style="" class="no-focus">
+			<img src="img/abuna-fest-together.webp" alt="" style="" class="no-focus">
 			<p class="no-focus" style="margin: 1vh 0 6vh 0;">всегда вместе</p>
 			<div class="box text-box" style="width: 100%; filter: invert(100%);">
 				<div class="desc" style="">
@@ -60,7 +52,7 @@
 		</div>
 		</div>
 	</div>
-	<div class="rollercoaster no-focus"><img src="https://retrailer.ru/wp-content/uploads/2023/03/instagram-12.jpg" alt=""><img src="https://sanya-anya.ru/wp-content/uploads/festival-avtodomov-v-suzdale-abunafest-2024-03-1024x683.webp" alt=""><img src="https://retrailer.ru/wp-content/uploads/2023/03/instagram-21.jpg" alt=""><img src="https://rvland.ru/wp-content/themes/rvl/specials/abunafest/2022/graphics/images/location_5.jpg" alt=""><img src="https://allfest.ru/sites/default/files/2023-03/abunafest-7.jpg" alt=""><img src="https://www.томикс33.рф/wp-content/uploads/2024/06/%D0%B0%D0%B1%D1%83%D0%BD%D0%B0%D1%84%D0%B5%D1%81%D1%82-1.jpg" alt=""></div>
+	<div class="rollercoaster no-focus"><img src="img/rollercoaster/1.webp" alt=""><img src="img/rollercoaster/2.webp" alt=""><img src="img/rollercoaster/3.webp" alt=""><img src="img/rollercoaster/4.webp" alt=""><img src="img/rollercoaster/5.webp" alt=""></div>
 	<div class="content asphalt">
 		<hr style="width: 100%; border: none; border-top: 4px dashed #0a140b;">
 		<p class="no-focus stars_start" style="font-family: 'Chalk'; opacity: 0.7;text-align: center;">Мы - большая семья</p>
@@ -68,7 +60,7 @@
 			<p style="">Ежегодно на наш фестиваль приезжают как новые,<span style="margin-left: 5px;"> </span> так и уже знакомые лица.<br><br>Различные клубы,<span style="margin-left: 5px;"> </span>путешественники и просто интересные гости.<br>Всех нас объединяет атмосфера праздника и бодрый дух караванинга и автотуризма.</p>
 			<div style="display: flex; justify-content: top;">
 				<p style="width: 50%;">Мы - как одна большая семья.<span style="margin-left: 5px;"> </span> всегда готовы помочь советом новичкам или<span style="margin-left: 5px;"> </span> обменяться опытом с уже былыми путешественниками.<span style="margin-left: 5px;"> </span>Фестиваль Абунафест — место,<span style="margin-left: 5px;"> </span> где искренне рады каждому.</p>
-				<img src="img/chalk_auto.png" alt="" style="opacity: 0.6;">
+				<img src="img/chalk_auto.webp" alt="" style="opacity: 0.6;">
 			</div>
 		</div>
 		<div class="members_count" style="">
@@ -81,34 +73,49 @@
 		<hr style="width: 100%; border: none; border-top: 4px dashed #0a140b;">
 	</div>
 
+	<div class="content paper">
+		<div class="grass">
+		</div>
+		<h1 style="font-weight: bold; font-family: 'Chalk'; z-index: 1;" id="history">История</h1>
+		<p>В 2020 году друг, брат караванер, Андрейка, во время жутких ковидных ограничений, закинул среди сообщества идею - а не собраться ли нам на небольшой Слётик у ABUNЫ в гостях - ведь это место, где точно рады каждому - всегда и максимально! 
+И собрались! На обычные июльские выходные отовсюду съехались 63 экипажа караванеров.
+Так стихийно, народно и дружно - и начался ABUNAFEST, за пять лет выросший до 700 с лишним экипажей-участников, сохраняя и преумножая тот самый главный уникальный статус семейности, всеобщей равности, главнейший принцип дружбы, взаимопомощи, взаимовыручки и даже, что уж скромничать - Любви.
+Да, именно так. Слёт Караванеров ABUNAFEST и есть территория Любви, место, где рады каждому, и недаром  девиз ABUNAFESTa - "Всегда Вместе!".
+В 2022 году, когда число экипажей-участников неожиданно перевалило за 500, дядя Вова вдруг сказал - не, не мой уровень, не мой масштаб, я-то - обычный и маленький, а Слёт - вон теперь какой необычный и большой! 
+Да, Слёт ABUNAFEST выходит за рамки Мценска, начинает путешествовать по стране, и, чтобы поддержать дядю Вову и не дать Слёту прекратиться - в самую трудную минуту знамя подхватывает Галушкин Максим. И с 2023 года у ABUNAFESTа два организатора - дядя Вова ABUNA и Максим Галушкин, причём Максим Сергеевич (DOCTORMAX) несёт основной груз организации по технической части и связям с партнёрами и администрациями.</p>
+	</div>
 
 	<div class="content sky" style="overflow-x: hidden; width: 100vw; position: relative;overflow: hidden;">
-		<img src="img/mel.jpg" alt="" style="position: absolute; height: 100vh; min-width: 100%; min-height: 100%; z-index: 0;"  class="no-focus">
+		<img src="img/mel.webp" alt="" style="position: absolute; height: 100vh; min-width: 100%; min-height: 100%; z-index: 0;"  class="no-focus">
 		<div class="lenta"></div>
-		<p style="font-weight: bold; font-family: 'Chalk'; z-index: 1;">Организаторы</p>
-		<div class="about left">
-			<img src="img/vladimir.jpg" class="no-focus">
-			<p>Всем привет, я Дядя Вова Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Alias quam magni quo voluptas sed incidunt, ratione, accusamus consequatur voluptates tempore voluptatem modi atque eligendi cumque expedita sit officia provident, velit.</p>
-		</div>
-		<div class="about right">
-			<img src="img/vladimir.jpg" class="no-focus">
-			<p>Всем привет, я Дядя Вова Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Alias quam magni quo voluptas sed incidunt, ratione, accusamus consequatur voluptates tempore voluptatem modi atque eligendi cumque expedita sit officia provident, velit.</p>
+		<p style="font-weight: bold; font-family: 'Chalk'; z-index: 1;" id="orgs">Организаторы</p>
+
+		<div class="organisators" style="display: flex;">
+			<div class="about">
+				<p style="text-align: left;"><span class="green" style="font-weight: 600; color: yellow; opacity: 0.6">Галушкин Максим Сергеевич</span>, друг и брат караванер, <span style="font-weight: 400">DOCTORMAX</span> из Нижнего Новгорода, активный участник всех Слётов, путешественник, общественник, семьянин, прекрасный доктор и просто хороший человек! Пришел на помощь, когда фестиваль вышел за рамки Мценска, и взял на себя основной груз организации.</p>
+			</div>
+			<img src="img/org.webp" alt="" style="z-index: 1;" class="no-focus">
+			<div class="about">
+				<p><span class="green" style="font-weight: 600; color: yellow; opacity: 0.6">Герченов Владимир Фёдорович</span>, в караванерском мире -  <span style="font-weight: 400">ABUNA</span>, что по-русски значит "отец наш", а по-простому - дядя Вова. Человек, с которого все началось. Во Мценск, в гости к ABUNE, - приезжали и приезжают многие, погостить, переночевать и интересно провести время.</p>
+			</div>
+			
 		</div>
 		<div class="lenta" style="position: absolute; bottom: 0px; transform: scale(-1,1);"></div>
 	</div>
-	<div class="content" style="">
+
+	
+
+	<div class="content" style="" id="news">
 		<div class="leaves">
 		</div>
 		<p style="color: white; font-family: 'Chalk';font-size: 40px;">Новости</p>
 		<div class="news">
 			<p>Всем привет! Наконец-то мы запускаем наш собственный сайт! Ваши мысли по поводу этого можно выразить в комментариях:</p>
-			<img src="https://rvland.ru/wp-content/themes/rvl/specials/abunafest/2022/graphics/images/location_5.jpg" alt="">
 			<video src="video.mp4" class="video-js" controls></video>
 		</div>
 		<div class="news">
 			<p>Всем привет! Наконец-то мы запускаем наш собственный сайт! Ваши мысли по поводу этого можно выразить в комментариях:</p>
 			<img src="https://rvland.ru/wp-content/themes/rvl/specials/abunafest/2022/graphics/images/location_5.jpg" alt="">
-			<video src="video.mp4" class="video-js" controls></video>
 		</div>
 	</div>
 </body> 

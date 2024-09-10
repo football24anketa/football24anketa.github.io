@@ -3,15 +3,7 @@ let body
 let rollercoaster
 let biglogo
 let lenta
-function handleResponse(data) {
-    if (data.response && data.response[0].members_count) {
-        console.log("Количество подписчиков: " + data.response[0].members_count);
-        // Можете записать количество подписчиков в нужное место на странице
-        document.getElementById('vkontakte_count').textContent = data.response[0].members_count;
-    } else {
-        console.log("Ошибка: Не удалось получить данные");
-    }
-}
+let navBut
 
 window.onload = function(){
 	scroll = document.getElementsByClassName('slow-scroll')[0];
@@ -22,6 +14,22 @@ window.onload = function(){
 	rollercoaster[0].scrollTo({left: window.scrollY});
 	lenta=document.getElementsByClassName('stars_start')[0]
 	leaves=document.getElementsByClassName('leaves')[0]
+	navBut=document.getElementsByClassName('nav-button');
+	Array.from(navBut).forEach(function(item, index, array){
+		item.addEventListener('click',function(){
+			window.scrollBy({
+				top: document.getElementById(item.getAttribute('href').substring(1)).getBoundingClientRect().y-100,
+				behavior: 'smooth'
+			})
+		})
+	})
+
+	document.getElementsByClassName('logo')[0].addEventListener('click', function(){
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			})
+		})
 	if(lenta.getBoundingClientRect().y<=0){
 		leaves.style.opacity = '1';
 	}
@@ -31,12 +39,14 @@ window.onload = function(){
 };
 
 window.addEventListener('scroll', function(){
-	if(lenta.getBoundingClientRect().y<=0){
-		leaves.style.opacity = '1';
+	if(lenta!=undefined){
+		if(lenta.getBoundingClientRect().y<=0){
+			leaves.style.opacity = '1';
+		}
+		else{
+			leaves.style.opacity = '0';
+		}
+		scroll.style.marginTop = `-${window.scrollY/5}px`;
+		rollercoaster[0].scrollTo({left: window.scrollY});
 	}
-	else{
-		leaves.style.opacity = '0';
-	}
-	scroll.style.marginTop = `-${window.scrollY/5}px`;
-	rollercoaster[0].scrollTo({left: window.scrollY});
 })
